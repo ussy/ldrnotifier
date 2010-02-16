@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$cmmXZ"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0"
+                   em:maxVersion="3.6.*" />
+  <RDF:Description RDF:about="rdf:#$hmmXZ"
+                   em:locale="ja"
+                   em:name="LDR Notifier"
+                   em:description="Livedoor Reader の未読数を取得します。"
+                   em:creator="ussy"
+                   em:homepageURL="http://www.pshared.net/" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="ldrnotifier@pshared.net"
+                   em:type="2"
+                   em:name="LDR Notifier"
+                   em:version="1.0.5"
+                   em:description="count unread entry on Livedoor Reader."
+                   em:optionsURL="chrome://ldrnotifier/content/general_preference.xul"
+                   em:iconURL="chrome://ldrnotifier/skin/icon.png"
+                   em:creator="ussy"
+                   em:homepageURL="http://www.pshared.net/"
+                   em:updateURL="http://github.com/ussy/ldrnotifier/raw/master/update.rdf"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoEwc3BMGA/OzPY5825eIy6vxI7s8/eoG8aMESKsHWf/JQaxfMa6NmFRjT+j5AG8mI3Cj8ZN1CJHbb4Yp6vIXZvFbaaeOR48c6tWnelNaxJwA/IFPpslID1KL6d0V2xFWt/U1waTK2/GcfX3KQixURwbMMbZ8pwyfeiqWHepQ/qQIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$cmmXZ"/>
+    <em:localized RDF:resource="rdf:#$hmmXZ"/>
+  </RDF:Description>
+</RDF:RDF>

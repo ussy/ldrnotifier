@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Seq RDF:about="rdf:#$9f3EH1">
+    <RDF:li RDF:resource="rdf:#$af3EH1"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf:#$df3EH1"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0"
+                   em:maxVersion="3.6.*"
+                   em:updateLink="http://github.com/ussy/ldrnotifier/raw/master/ldrnotifier.xpi"
+                   em:updateHash="sha512:80d79017f87e16e24bb57a04b28f3b27c2249a5e0c29711dd9585fa2a2e93ffd68be1b40be0fa09e7e75abf0adc2cade476b01fb7a164958f3dead201bcd580b" />
+  <RDF:Description RDF:about="urn:mozilla:extension:ldrnotifier@pshared.net"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAAm1KX9ev0QplzJdFjOhzRRapARSG9Q+dYIEbT17RT/FyKDkKLzObjT0NPMYAHihdrXnWTJhFAyr3C221KCRRho7iUVSKr4D12ojx+dGDPLS0OX+7qZ7Bj3lz+YTamxqMSzphcVxObD9rMkxroUyYs63Nn008eBH0lXEzcWpUby1">
+    <em:updates RDF:resource="rdf:#$9f3EH1"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$af3EH1"
+                   em:version="1.0.5">
+    <em:targetApplication RDF:resource="rdf:#$df3EH1"/>
+  </RDF:Description>
+</RDF:RDF>

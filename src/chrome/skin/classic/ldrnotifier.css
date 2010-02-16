@@ -1,0 +1,19 @@
+statusbarpanel#LDRNotifierPanel label {
+  margin: 1px 0 0 3px;
+  color: #333;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+statusbarpanel#LDRNotifierPanel image#LDRNotifierPanelImage {
+  list-style-image: url("chrome://ldrnotifier/skin/icon_e.png");
+}
+
+statusbarpanel#LDRNotifierPanel.check image#LDRNotifierPanelImage {
+  list-style-image: url("chrome://ldrnotifier/skin/icon_loading.gif");
+}
+
+statusbarpanel#LDRNotifierPanel[status="disabled"] image#LDRNotifierPanelImage {
+  list-style-image: url("chrome://ldrnotifier/skin/icon_d.png")!important;
+}
+

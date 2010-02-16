@@ -1,0 +1,8 @@
+<!ENTITY LDRNotifier.tooltip "Unread Count">
+<!ENTITY LDRNotifier.user "User">
+<!ENTITY LDRNotifier.interval "request interval">
+<!ENTITY LDRNotifier.intervalUnit "minutes">
+<!ENTITY LDRNotifier.iconVisible "Notification">
+<!ENTITY LDRNotifier.visibleCondition "over entries">
+<!ENTITY LDRNotifier.preference "option">
+<!ENTITY LDRNotifier.enabled "enabled">

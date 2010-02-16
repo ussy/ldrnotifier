@@ -1,0 +1,6 @@
+content  ldrnotifier                           chrome/content/
+resource ldrnotifier                           chrome/modules/
+locale   ldrnotifier en-US                     chrome/locale/en-US/
+locale   ldrnotifier ja-JP                     chrome/locale/ja-JP/
+skin     ldrnotifier classic/1.0               chrome/skin/classic/
+overlay  chrome://browser/content/browser.xul  chrome://ldrnotifier/content/ldrnotifier.xul

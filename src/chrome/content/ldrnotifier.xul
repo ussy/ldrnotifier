@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://ldrnotifier/skin/ldrnotifier.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://ldrnotifier/locale/ldrnotifier.dtd">
+<overlay id="LDRNotifierOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="ldrnotifier_bundle" src="chrome://ldrnotifier/locale/ldrnotifier.properties" />
+  </stringbundleset>
+
+  <script type="application/x-javascript" src="chrome://ldrnotifier/content/ldrnotifier.js" />
+  <script type="application/x-javascript" src="chrome://ldrnotifier/content/general_preference.js" />
+  <script type="application/x-javascript">
+    Components.utils.import("resource://ldrnotifier/requestor.js");
+    window.addEventListener("load", LDRNotifier, false);
+    window.addEventListener("unload", LDRNotifier, false);
+  </script>
+
+  <popupset>
+    <popup id="LDRNotifierContext">
+      <menuitem id="LDRNotifierContextPreference" label="&LDRNotifier.preference;" oncommand="LDRNotifierGeneralPreference.show();" />
+      <menuitem id="LDRNotifierContextEnabled" type="checkbox" label="&LDRNotifier.enabled;" oncommand="LDRNotifier.switchEnabled();" />
+    </popup>
+  </popupset>
+
+  <statusbar id="status-bar">
+    <statusbarpanel
+       id="LDRNotifierPanel"
+       context="LDRNotifierContext"
+       tooltiptext="&LDRNotifier.tooltip;"
+       onmousedown="LDRNotifier.onMouseClick(event)">
+      <image tooltiptext="&LDRNotifier.tooltip;" id="LDRNotifierPanelImage" />
+      <label tooltiptext="&LDRNotifier.tooltip;" id="LDRNotifierPanelLabel" value="0" />
+    </statusbarpanel>
+  </statusbar>
+</overlay>

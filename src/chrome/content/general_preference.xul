@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<!DOCTYPE overlay SYSTEM "chrome://ldrnotifier/locale/ldrnotifier.dtd">
+<dialog
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    title="LDRNotifier Option"
+    buttons="accept,cancel"
+    onload="LDRNotifierGeneralPreference.load();"
+    ondialogaccept="return LDRNotifierGeneralPreference.accept();">
+  <script type="application/x-javascript" src="chrome://ldrnotifier/content/ldrnotifier.js" />
+  <script type="application/x-javascript" src="chrome://ldrnotifier/content/general_preference.js" />
+  <script type="application/x-javascript">
+    Components.utils.import("resource://ldrnotifier/requestor.js");
+  </script>
+
+  <groupbox flex="1">
+    <caption>
+      <checkbox id="LDRNotifierEnabled" label="&LDRNotifier.enabled;" />
+    </caption>
+    <grid id="LDRNotifierConfig" flex="1">
+      <columns>
+        <column />
+        <column flex="1" />
+      </columns>
+      <rows>
+        <row align="center">
+          <label control="LDRNotifierUser" value="&LDRNotifier.user;" />
+          <textbox id="LDRNotifierUser" maxlength="20" maxwidth="150" flex="1" />
+        </row>
+        <row align="center">
+          <label control="LDRNotifierInterval" value="&LDRNotifier.interval;" />
+          <hbox flex="1" align="center">
+            <textbox id="LDRNotifierInterval" maxlength="3" maxwidth="60" style="text-align: right" />
+            <label control="LDRNotifierInterval" value="&LDRNotifier.intervalUnit;" />
+          </hbox>
+        </row>
+        <row align="center">
+          <label control="LDRNotifierVisibleCount" value="&LDRNotifier.iconVisible;" />
+          <hbox flex="1" align="center">
+            <textbox id="LDRNotifierVisibleCount" maxlength="6" maxwidth="60" style="text-align: right" />
+            <label control="LDRNotifierVisibleCount" value="&LDRNotifier.visibleCondition;" />
+          </hbox>
+        </row>
+      </rows>
+    </grid>
+  </groupbox>
+</dialog>

@@ -1,0 +1,8 @@
+<!ENTITY LDRNotifier.tooltip "未読数">
+<!ENTITY LDRNotifier.user "ユーザー名">
+<!ENTITY LDRNotifier.interval "リクエスト間隔">
+<!ENTITY LDRNotifier.intervalUnit "分">
+<!ENTITY LDRNotifier.iconVisible "通知">
+<!ENTITY LDRNotifier.visibleCondition "件より多い">
+<!ENTITY LDRNotifier.preference "設定">
+<!ENTITY LDRNotifier.enabled "有効">
