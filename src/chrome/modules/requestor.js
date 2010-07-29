@@ -1,7 +1,6 @@
 var EXPORTED_SYMBOLS = ["Requestor"];
 
 var Requestor = {
-  app: Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager).getItemForID("ldrnotifier@pshared.net"),
   config: null,
   fire: false,
   count: 0,
@@ -9,7 +8,6 @@ var Requestor = {
 
   startInterval: function(config) {
     var isRequested = (this.config != null);
-
     this.config = config;
     if (!isRequested) {
       this._request();
@@ -52,17 +50,29 @@ var Requestor = {
       }
     }, false);
 
-    req.QueryInterface(Components.interfaces.nsIXMLHttpRequest);
-    req.open("GET", "http://rpc.reader.livedoor.com/notify?user=" + Requestor.config.user, true);
-    req.setRequestHeader("User-Agent", Requestor.app.name + "/" + Requestor.app.version, false);
-    req.send(null);
+    if (!("@mozilla.org/extensions/manager;1" in Components.classes)) {
+      Components.utils.import("resource://gre/modules/AddonManager.jsm");
+      AddonManager.getAddonByID("ldrnotifier@pshared.net", function(addon) {
+        request(addon);
+      });
+    } else {
+      var addon = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager).getItemForID("ldrnotifier@pshared.net");
+      request(addon);
+    }
 
-    timeoutTimer.initWithCallback({
-      notify: function() {
-        req.abort();
-        notifyError();
-      }
-    }, 10000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
+    function request(addon) {
+      req.QueryInterface(Components.interfaces.nsIXMLHttpRequest);
+      req.open("GET", "http://rpc.reader.livedoor.com/notify?user=" + Requestor.config.user, true);
+      req.setRequestHeader("User-Agent", addon.name + "/" + addon.version, false);
+      req.send(null);
+
+      timeoutTimer.initWithCallback({
+        notify: function() {
+          req.abort();
+          notifyError();
+        }
+      }, 10000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
+    }
 
     function notifyFire(count) {
       var bundleService = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService);
@@ -95,7 +105,7 @@ var Requestor = {
 
   observe: function(aSubject, aTopic, aData) {
     switch (aTopic) {
-     case "quit-application-requested":
+    case "quit-application-requested":
       Requestor.observerService.removeObserver(Requestor, "quit-application-requested");
       Requestor.stopInterval();
       break;

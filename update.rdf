@@ -8,7 +8,7 @@
   <RDF:Description RDF:about="rdf:#$df3EH1"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
-                   em:maxVersion="3.6.*"
+                   em:maxVersion="4.0.*"
                    em:updateLink="http://github.com/ussy/ldrnotifier/raw/master/ldrnotifier.xpi"
                    em:updateHash="sha512:80d79017f87e16e24bb57a04b28f3b27c2249a5e0c29711dd9585fa2a2e93ffd68be1b40be0fa09e7e75abf0adc2cade476b01fb7a164958f3dead201bcd580b" />
   <RDF:Description RDF:about="urn:mozilla:extension:ldrnotifier@pshared.net"
@@ -16,7 +16,7 @@
     <em:updates RDF:resource="rdf:#$9f3EH1"/>
   </RDF:Description>
   <RDF:Description RDF:about="rdf:#$af3EH1"
-                   em:version="1.0.5">
+                   em:version="1.0.6">
     <em:targetApplication RDF:resource="rdf:#$df3EH1"/>
   </RDF:Description>
 </RDF:RDF>

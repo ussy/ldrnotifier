@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="rdf:#$cmmXZ"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
-                   em:maxVersion="3.6.*" />
+                   em:maxVersion="4.0.*" />
   <RDF:Description RDF:about="rdf:#$hmmXZ"
                    em:locale="ja"
                    em:name="LDR Notifier"
@@ -16,7 +16,7 @@
                    em:id="ldrnotifier@pshared.net"
                    em:type="2"
                    em:name="LDR Notifier"
-                   em:version="1.0.5"
+                   em:version="1.0.6"
                    em:description="count unread entry on Livedoor Reader."
                    em:optionsURL="chrome://ldrnotifier/content/general_preference.xul"
                    em:iconURL="chrome://ldrnotifier/skin/icon.png"
