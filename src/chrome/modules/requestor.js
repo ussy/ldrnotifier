@@ -22,6 +22,10 @@ var Requestor = {
     this.requestTimer.cancel();
   },
 
+  _getUserAgent: function(addon) {
+    return addon.name + "/" + addon.version;
+  },
+
   _request: function() {
     var timeoutTimer = Components.classes["@mozilla.org/timer;1"].createInstance(Components.interfaces.nsITimer);
     var observerService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
@@ -50,20 +54,26 @@ var Requestor = {
       }
     }, false);
 
-    if (!("@mozilla.org/extensions/manager;1" in Components.classes)) {
-      Components.utils.import("resource://gre/modules/AddonManager.jsm");
-      AddonManager.getAddonByID("ldrnotifier@pshared.net", function(addon) {
-        request(addon);
-      });
+    if (Requestor.userAgent) {
+      request();
     } else {
-      var addon = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager).getItemForID("ldrnotifier@pshared.net");
-      request(addon);
+      if (!("@mozilla.org/extensions/manager;1" in Components.classes)) {
+        Components.utils.import("resource://gre/modules/AddonManager.jsm");
+        AddonManager.getAddonByID("ldrnotifier@pshared.net", function(addon) {
+          Requestor.userAgent = Requestor._getUserAgent(addon);
+          request();
+        });
+      } else {
+        var addon = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager).getItemForID("ldrnotifier@pshared.net");
+        Requestor.userAgent = Requestor._getUserAgent(addon);
+        request();
+      }
     }
 
-    function request(addon) {
+    function request() {
       req.QueryInterface(Components.interfaces.nsIXMLHttpRequest);
       req.open("GET", "http://rpc.reader.livedoor.com/notify?user=" + Requestor.config.user, true);
-      req.setRequestHeader("User-Agent", addon.name + "/" + addon.version, false);
+      req.setRequestHeader("User-Agent", Requestor.userAgent, false);
       req.send(null);
 
       timeoutTimer.initWithCallback({
