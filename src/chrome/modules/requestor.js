@@ -105,7 +105,7 @@ var Requestor = {
 
   observe: function(aSubject, aTopic, aData) {
     switch (aTopic) {
-    case "quit-application-requested":
+     case "quit-application-requested":
       Requestor.observerService.removeObserver(Requestor, "quit-application-requested");
       Requestor.stopInterval();
       break;
