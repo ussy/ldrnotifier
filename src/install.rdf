@@ -22,7 +22,7 @@
                    em:iconURL="chrome://ldrnotifier/skin/icon.png"
                    em:creator="ussy"
                    em:homepageURL="http://www.pshared.net/"
-                   em:updateURL="http://github.com/ussy/ldrnotifier/raw/master/update.rdf"
+                   em:updateURL="https://github.com/ussy/ldrnotifier/raw/master/update.rdf"
                    em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoEwc3BMGA/OzPY5825eIy6vxI7s8/eoG8aMESKsHWf/JQaxfMa6NmFRjT+j5AG8mI3Cj8ZN1CJHbb4Yp6vIXZvFbaaeOR48c6tWnelNaxJwA/IFPpslID1KL6d0V2xFWt/U1waTK2/GcfX3KQixURwbMMbZ8pwyfeiqWHepQ/qQIDAQAB">
     <em:targetApplication RDF:resource="rdf:#$cmmXZ"/>
     <em:localized RDF:resource="rdf:#$hmmXZ"/>

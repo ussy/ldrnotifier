@@ -9,8 +9,8 @@
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
                    em:maxVersion="4.0.*"
-                   em:updateLink="http://github.com/ussy/ldrnotifier/raw/master/ldrnotifier.xpi"
-                   em:updateHash="sha512:12e20fd8cde7efe885f24cf9569d3cf906530e09b268bbbc5aeb871104359f64988a83e63337380216fda1ae43254565b68d08c15d5ce362a8569ba3fd19c728" />
+                   em:updateLink="https://github.com/ussy/ldrnotifier/raw/master/ldrnotifier.xpi"
+                   em:updateHash="sha512:ad1b4446ce40e4f3a0212946481c1acec4c6637da1f2b63090c449e2dc51bfc6453298a4b32c6bd6cb39ceedf8e6403a5f62bde09232b78f07411ce498716277" />
   <RDF:Description RDF:about="urn:mozilla:extension:ldrnotifier@pshared.net"
                    em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAAm1KX9ev0QplzJdFjOhzRRapARSG9Q+dYIEbT17RT/FyKDkKLzObjT0NPMYAHihdrXnWTJhFAyr3C221KCRRho7iUVSKr4D12ojx+dGDPLS0OX+7qZ7Bj3lz+YTamxqMSzphcVxObD9rMkxroUyYs63Nn008eBH0lXEzcWpUby1">
     <em:updates RDF:resource="rdf:#$9f3EH1"/>
