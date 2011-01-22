@@ -10,7 +10,7 @@
                    em:minVersion="3.0"
                    em:maxVersion="4.0.*"
                    em:updateLink="http://github.com/ussy/ldrnotifier/raw/master/ldrnotifier.xpi"
-                   em:updateHash="sha512:80d79017f87e16e24bb57a04b28f3b27c2249a5e0c29711dd9585fa2a2e93ffd68be1b40be0fa09e7e75abf0adc2cade476b01fb7a164958f3dead201bcd580b" />
+                   em:updateHash="sha512:12e20fd8cde7efe885f24cf9569d3cf906530e09b268bbbc5aeb871104359f64988a83e63337380216fda1ae43254565b68d08c15d5ce362a8569ba3fd19c728" />
   <RDF:Description RDF:about="urn:mozilla:extension:ldrnotifier@pshared.net"
                    em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAAm1KX9ev0QplzJdFjOhzRRapARSG9Q+dYIEbT17RT/FyKDkKLzObjT0NPMYAHihdrXnWTJhFAyr3C221KCRRho7iUVSKr4D12ojx+dGDPLS0OX+7qZ7Bj3lz+YTamxqMSzphcVxObD9rMkxroUyYs63Nn008eBH0lXEzcWpUby1">
     <em:updates RDF:resource="rdf:#$9f3EH1"/>
